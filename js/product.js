@@ -101,7 +101,7 @@ function getInformation() {
                 let rightUrl = ((product.ImageURL).includes('.jpg') ? product.ImageURL : product.ImageURL + product.ImageName)
                 checkIfImageExists(rightUrl, (exists) => {
                     if (exists) {
-                        itemsContainer.innerHTML += `<div class="bg-white rounded-lg border p-4 w-80 flex-shrink-0 h-[450px] relative flex flex-col justify-between" style="order:${product.ID}">
+                        itemsContainer.innerHTML += `<div class="bg-white rounded-lg border p-4 w-80 flex-shrink-0 h-[450px] relative flex flex-col " style="order:${product.ID}">
                         <i class="off">${product.PercentOFF * 100}%</i>
                         <img src="${rightUrl}" alt="${product.ImageName}" class="w-full h-48 rounded-md object-cover drop-shadow">
                         <div class="px-1 py-4">
@@ -110,13 +110,13 @@ function getInformation() {
                             ${product.Description}
                           </p>
                         </div>
-                        <div class="px-1 py-4 ">
+                        <div class="px-1 pt-4 flex flex-col flex-grow justify-end ">
                           <span class="text-2xl text-blue-800 font-bold block">$${(product.RealPrice - product.RealPrice * product.PercentOFF).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</span>
                           <span class="text-slate-600 font-light line-through">$${(product.RealPrice).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</span>
                         </div>
                       </div>`
                     } else {
-                        itemsContainer.innerHTML += `<div class="bg-white rounded-lg border p-4 w-80 flex-shrink-0 h-[450px] relative flex flex-col justify-between" style="order:${product.ID};">
+                        itemsContainer.innerHTML += `<div class="bg-white rounded-lg border p-4 w-80 flex-shrink-0 h-[450px] relative flex flex-col " style="order:${product.ID};">
                         <i class="off">${product.PercentOFF * 100}%</i>
                         <img src="${'img/Image-not-found.png'}" alt="${product.ImageName}" class="w-full h-48 rounded-md object-cover drop-shadow">
                         <div class="px-1 py-4">
@@ -125,7 +125,7 @@ function getInformation() {
                             ${product.Description}
                           </p>
                         </div>
-                        <div class="px-1 py-4 ">
+                        <div class="px-1 pt-4 flex flex-col flex-grow justify-end ">
                           <span class="text-2xl text-blue-800 font-bold block">$${(product.RealPrice - product.RealPrice * product.PercentOFF).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</span>
                           <span class="text-slate-600 font-light line-through">$${(product.RealPrice).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</span>
                         </div>
