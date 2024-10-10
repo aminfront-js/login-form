@@ -101,7 +101,7 @@ function getInformation() {
                 let rightUrl = ((product.ImageURL).includes('.jpg') ? product.ImageURL : product.ImageURL + product.ImageName)
                 checkIfImageExists(rightUrl, (exists) => {
                     if (exists) {
-                        itemsContainer.innerHTML += `<div class="bg-white rounded-lg border p-4 w-80 flex-shrink-0 h-[450px] relative" style="order:${product.ID}">
+                        itemsContainer.innerHTML += `<div class="bg-white rounded-lg border p-4 w-80 flex-shrink-0 h-[450px] relative flex flex-col justify-between" style="order:${product.ID}">
                         <i class="off">${product.PercentOFF * 100}%</i>
                         <img src="${rightUrl}" alt="${product.ImageName}" class="w-full h-48 rounded-md object-cover drop-shadow">
                         <div class="px-1 py-4">
@@ -116,7 +116,7 @@ function getInformation() {
                         </div>
                       </div>`
                     } else {
-                        itemsContainer.innerHTML += `<div class="bg-white rounded-lg border p-4 w-80 flex-shrink-0 h-[450px] relative" style="order:${product.ID};">
+                        itemsContainer.innerHTML += `<div class="bg-white rounded-lg border p-4 w-80 flex-shrink-0 h-[450px] relative flex flex-col justify-between" style="order:${product.ID};">
                         <i class="off">${product.PercentOFF * 100}%</i>
                         <img src="${'img/Image-not-found.png'}" alt="${product.ImageName}" class="w-full h-48 rounded-md object-cover drop-shadow">
                         <div class="px-1 py-4">
