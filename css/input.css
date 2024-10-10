@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    .loading {
+        backdrop-filter: blur(5px) brightness(110%) !important;
+        background-color: rgb(128 128 128 / 40%) !important;
+        border: 1px solid rgb(128 128 128 / 40%) !important;
+        /* height: 100vh !important;  */
+    }
+    .off{
+      position: absolute;
+      background: red;
+      width: 30px;
+      height: 30px;
+      display: block;
+      border-radius: 100%;
+      left: 5px;
+      top: 5px;
+      z-index: 100;
+      box-sizing: border-box;
+      color: white;
+      text-align: center;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+      
+  }
